@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIDEO GALLERY</title>
+    <link rel="stylesheet" href="video html.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MAKING VIDEO GALLERY WEB PAGE</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="file:///E:/HTML/video%20html/pic1.png" width="100%">
+                    <img src="file:///E:/HTML/video%20html/play.png" class="play-btn" onclick="playvideo('file:///E:/HTML/video%20html/video.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="file:///E:/HTML/video%20html/pic2.png">
+                        <img src="file:///E:/HTML/video%20html/play.png" class="play-btn" onclick="playvideo('file:///E:/HTML/video%20html/production%20ID_3819342.mp4')">
+                    </div>
+                    <p>Making multiple video in a websire or <br> making video gallery.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="file:///E:/HTML/video%20html/pic3.png">
+                        <img src="file:///E:/HTML/video%20html/play.png" class="play-btn"onclick="playvideo('file:///E:/HTML/video%20html/production%20ID_4465352.mp4')">
+                    </div>
+                    <p>Making multiple video in a websire or <br> making video gallery.</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="file:///E:/HTML/video%20html/pic4.png">
+                        <img src="file:///E:/HTML/video%20html/play.png" class="play-btn"onclick="playvideo('file:///E:/HTML/video%20html/Man%20Texting%20On%20The%20Street.mp4')">
+                    </div>
+                    <p>Making multiple video in a websire or <br> making video gallery.</p>
+                </div>
+            </div>
+       </div>
+    </div>
+        <div class="video-player" id="videoplayer">
+            <video width="100%" height="50%" controls autoplay id="myVideo">
+                <source src="file:///E:/HTML/video%20html/video.mp4" type="video/mp4" > 
+            </video>
+            <img src="file:///E:/HTML/video%20html/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+
+            <script>
+
+                var videoplayer = document.getElementById("videoplayer")
+                var myVideo = document.getElementById("myVideo")
+                
+                function stopVideo(){
+                    videoplayer.style.display = "none";
+                }
+                function playvideo(file){
+                    myVideo.src = file;
+                    videoplayer.style.display = "block";
+                }
+            </script>
+</body>
+</html>
